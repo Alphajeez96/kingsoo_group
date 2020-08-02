@@ -1,9 +1,30 @@
 <template >
+<div>
+ <div>
+    <div>
+    <vs-navbar v-model="activeItem" class="nabarx">
+      <div  slot="title">
+        <vs-navbar-title>
+     
+    <vs-button @click="active=!active" color="primary" type="filled">Open Sidebar</vs-button>
+        </vs-navbar-title>
+      </div>
 
+      <vs-navbar-item index="0">
+        <a href="#">Home</a>
+      </vs-navbar-item>
+      <vs-navbar-item index="1">
+        <a href="#">News</a>
+      </vs-navbar-item>
+      <vs-navbar-item index="2">
+        <a href="#">Update</a>
+      </vs-navbar-item>
+    </vs-navbar>
+  </div>
+  </div>
   <div id="parentx">
 
-    <vs-button @click="active=!active" color="primary" type="filled">Open Sidebar</vs-button>
-    <vs-sidebar parent="body" default-index="1"  color="primary" class="sidebarx" spacer v-model="active">
+    <vs-sidebar parent="body" default-index="1"   color="primary" class="sidebarx" spacer v-model="active">
 
       <div class="header-sidebar" slot="header">
         <vs-avatar  size="70px" src="https://randomuser.me/api/portraits/men/85.jpg"/>
@@ -44,14 +65,19 @@
 
     </vs-sidebar>
   </div>
-
+</div>
 </template>
 
 <script>
+import knav from './navbar'
 export default {
+    name: 'sidebar',
+    components:{
+        knav
+    },
     
   data:()=>({
-    active:true,
+    active:false,
   })
 }
 </script>
