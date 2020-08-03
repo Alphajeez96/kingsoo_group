@@ -1,29 +1,40 @@
 <template>
-  <div>
-    <vs-navbar collapse v-model="activeItem" class="nabarx container">
-      <div slot="title">
-        <vs-navbar-title>
-          Hello world
-        </vs-navbar-title>
-      </div>
-
-      <vs-navbar-item index="0">
-        <a href="#">Home</a>
-      </vs-navbar-item>
-      <vs-navbar-item index="1">
-        <a href="#">News</a>
-      </vs-navbar-item>
-      <vs-navbar-item index="2">
-        <a href="#">Update</a>
-      </vs-navbar-item>
-    </vs-navbar>
-  </div>
+  <header>
+    <section class="container main-iv px-0">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand a-text flex" href="#">
+        
+        </a>
+      </nav>
+    </section>
+  </header>
 </template>
 <script>
 export default {
-    name: 'knav',
-  data:()=>({
-    activeItem: 0
-  })
-}
+  name: "",
+  data() {
+    return {
+
+    };
+  },
+ 
+};
 </script>
+
+<style scoped>
+header {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+}
+
+.nav-item {
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  font-style: normal;
+}
+</style>
